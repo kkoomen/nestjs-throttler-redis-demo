@@ -1,0 +1,49 @@
+command: redis-benchmark -q -n 100000
+
+================================================================================
+Benchmark: single redis instance (docker)
+================================================================================
+PING_INLINE: 28818.44 requests per second, p50=1.439 msec
+PING_MBULK: 28702.64 requests per second, p50=1.423 msec
+SET: 30469.22 requests per second, p50=1.399 msec
+GET: 26239.83 requests per second, p50=1.567 msec
+INCR: 25335.70 requests per second, p50=1.567 msec
+LPUSH: 24801.59 requests per second, p50=1.575 msec
+RPUSH: 24624.48 requests per second, p50=1.607 msec
+LPOP: 24624.48 requests per second, p50=1.599 msec
+RPOP: 24207.21 requests per second, p50=1.623 msec
+SADD: 25549.31 requests per second, p50=1.559 msec
+HSET: 24545.90 requests per second, p50=1.639 msec
+SPOP: 24975.02 requests per second, p50=1.607 msec
+ZADD: 25075.23 requests per second, p50=1.599 msec
+ZPOPMIN: 28169.01 requests per second, p50=1.455 msec
+LPUSH (needed to benchmark LRANGE): 28433.32 requests per second, p50=1.463 msec
+LRANGE_100 (first 100 elements): 20193.86 requests per second, p50=2.095 msec
+LRANGE_300 (first 300 elements): 13646.29 requests per second, p50=3.167 msec
+LRANGE_500 (first 500 elements): 9675.86 requests per second, p50=4.399 msec
+LRANGE_600 (first 600 elements): 8792.75 requests per second, p50=4.863 msec
+MSET (10 keys): 21440.82 requests per second, p50=1.823 msec
+
+================================================================================
+Benchmark: single redis instance (local)
+================================================================================
+PING_INLINE: 143061.52 requests per second, p50=0.175 msec
+PING_MBULK: 145772.59 requests per second, p50=0.183 msec
+SET: 147492.62 requests per second, p50=0.183 msec
+GET: 147058.83 requests per second, p50=0.183 msec
+INCR: 147492.62 requests per second, p50=0.183 msec
+LPUSH: 149031.30 requests per second, p50=0.175 msec
+RPUSH: 147929.00 requests per second, p50=0.183 msec
+LPOP: 149476.83 requests per second, p50=0.175 msec
+RPOP: 146842.88 requests per second, p50=0.175 msec
+SADD: 147929.00 requests per second, p50=0.183 msec
+HSET: 148588.42 requests per second, p50=0.175 msec
+SPOP: 147492.62 requests per second, p50=0.183 msec
+ZADD: 149031.30 requests per second, p50=0.175 msec
+ZPOPMIN: 147492.62 requests per second, p50=0.183 msec
+LPUSH (needed to benchmark LRANGE): 149031.30 requests per second, p50=0.175 msec
+LRANGE_100 (first 100 elements): 79681.27 requests per second, p50=0.327 msec
+LRANGE_300 (first 300 elements): 41050.90 requests per second, p50=0.623 msec
+LRANGE_500 (first 500 elements): 27609.06 requests per second, p50=0.927 msec
+LRANGE_600 (first 600 elements): 23413.72 requests per second, p50=1.087 msec
+MSET (10 keys): 144508.67 requests per second, p50=0.191 msec
